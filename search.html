@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="bloodApp">
+
+<head>
+
+<title>Search Blood</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="searchController">
+
+<h1>Search Blood Availability</h1>
+
+<input type="text" placeholder="Enter Blood Group" ng-model="group">
+
+<button ng-click="searchBlood()">Search</button>
+
+<table>
+
+<tr>
+<th>Unit No</th>
+<th>Blood Group</th>
+<th>Collection Date</th>
+</tr>
+
+<tr ng-repeat="b in blood">
+
+<td>{{b.unitNo}}</td>
+<td>{{b.bloodGroup}}</td>
+<td>{{b.collectionDate}}</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>

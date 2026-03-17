@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="bloodApp">
+
+<head>
+
+<title>Donor List</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="donorController">
+
+<h1>Registered Donors</h1>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Blood Group</th>
+<th>Phone</th>
+<th>Address</th>
+</tr>
+
+<tr ng-repeat="d in donors">
+
+<td>{{d.name}}</td>
+<td>{{d.blood_group}}</td>
+<td>{{d.phone}}</td>
+<td>{{d.address}}</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>

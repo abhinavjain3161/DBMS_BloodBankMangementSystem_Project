@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="bloodApp">
+
+<head>
+
+<title>Request Blood</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="recipientController">
+
+<h1>Request Blood</h1>
+
+<form ng-submit="addRecipient()">
+
+<input type="text" placeholder="Name" ng-model="recipient.name" required>
+
+<input type="text" placeholder="Blood Group Needed" ng-model="recipient.blood_group">
+
+<input type="text" placeholder="Hospital Name" ng-model="recipient.hospital_name">
+
+<input type="text" placeholder="Phone" ng-model="recipient.phone">
+
+<button type="submit">Request Blood</button>
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="bloodApp">
+
+<head>
+
+<title>Issue Blood</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="issueController">
+
+<h1>Issue Blood</h1>
+
+<form ng-submit="issueBlood()">
+
+<input type="number" placeholder="Recipient ID" ng-model="recipient_id" required>
+
+<select ng-model="unitNo" required>
+
+<option value="">Select Blood Unit</option>
+
+<option ng-repeat="b in bloodunits" value="{{b.unitNo}}">
+Unit {{b.unitNo}} ({{b.bloodGroup}})
+</option>
+
+</select>
+
+<button type="submit">Issue Blood</button>
+
+</form>
+
+</body>
+</html>

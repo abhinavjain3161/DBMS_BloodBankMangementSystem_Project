@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="bloodApp">
+
+<head>
+
+<title>Blood Requests</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="recipientListController">
+
+<h1>Blood Requests</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Blood Group</th>
+<th>Hospital</th>
+<th>Phone</th>
+</tr>
+
+<tr ng-repeat="r in recipients">
+
+<td>{{r.recipient_id}}</td>
+<td>{{r.name}}</td>
+<td>{{r.blood_group}}</td>
+<td>{{r.hospital_name}}</td>
+<td>{{r.phone}}</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
